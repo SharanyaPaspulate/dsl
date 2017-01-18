@@ -24,7 +24,7 @@ freeStyleJob('sample_dsl') {
       shell("echo hello world")
     }
     postBuildSteps {
-        buildProject('sample')
+        buildOtherProject('sample')
     configure { it <<
         'runPostStepsIfResult' {
             name('SUCCESS')
