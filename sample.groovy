@@ -3,6 +3,9 @@ freeStyleJob('sample_dsl') {
     description("Do not change this config directly.")
     label 'linux'
     logRotator(-1, 10000, 5, -1)
+    parameters { 
+        stringParam('myEnv')
+        }
     scm {
         git {
             remote {
@@ -28,6 +31,9 @@ freeStyleJob('sample') {
     description("Do not change this config directly.")
     label 'linux'
     logRotator(-1, 10000, 5, -1)
+    parameters { 
+    stringParam('hostname')
+  }
     scm {
         git {
             remote {
