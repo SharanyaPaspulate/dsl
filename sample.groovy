@@ -24,7 +24,7 @@ freeStyleJob('sample_dsl') {
       shell("echo hello world")
     }
     postBuildSteps {
-        buildOtherProject('sample')
+        buildFlowJob(String sample, Clourser clouser  = null)
     configure { it <<
         'runPostStepsIfResult' {
             name('SUCCESS')
