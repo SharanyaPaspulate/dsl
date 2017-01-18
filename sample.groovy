@@ -25,12 +25,12 @@ freeStyleJob('sample_dsl') {
     }
     postBuildSteps {
         buildProject('sample')
-        }
     configure { it <<
         'runPostStepsIfResult' {
             name('SUCCESS')
         }
     }
+}
 }
 
 
