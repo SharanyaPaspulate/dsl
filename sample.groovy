@@ -23,11 +23,10 @@ freeStyleJob('sample_dsl') {
     steps {
       shell("echo hello world")
     }
-    postBuildSteps {
-        projectToBuild('sample')
-    configure { it <<
-        'runPostStepsIfResult' {
-            name('SUCCESS')
+    tasks {
+        buildTriggers('sample')
+
+        threshold('success','true')
         }
     }
 }
