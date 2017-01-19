@@ -23,9 +23,9 @@ freeStyleJob('sample_dsl') {
       shell("echo hello world")
     }
     
-    triggers{
-        upstream('sample', threshold = 'SUCCESS')
-    }
+    publishers {
+        downstream('test', thresholdName = 'SUCCESS')
+            }
 }
 
 
