@@ -2,7 +2,6 @@ freeStyleJob('sample_dsl') {
     
     description("Do not change this config directly.")
     label 'linux'
-    logRotator(-1, 10000, 5, -1)
     parameters { 
         stringParam('myEnv')
         }
@@ -23,10 +22,10 @@ freeStyleJob('sample_dsl') {
     steps {
       shell("echo hello world")
     }
-    tasks {
+    tasks ('success',true) {
+    
         buildTriggers('sample')
 
-        threshold('success','true')
         }
     }
 
