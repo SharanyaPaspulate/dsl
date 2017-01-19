@@ -30,7 +30,6 @@ freeStyleJob('sample_dsl') {
         }
     }
 
-}
 
 
 freeStyleJob('sample') {
