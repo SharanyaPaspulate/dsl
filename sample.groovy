@@ -29,7 +29,7 @@ freeStyleJob('sample_dsl') {
         threshold('success','true')
         }
     }
-}
+
 }
 
 
