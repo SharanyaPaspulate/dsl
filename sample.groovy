@@ -26,6 +26,7 @@ freeStyleJob('sample_dsl') {
     triggers{
         upstream('sample', threshold = 'SUCCESS')
     }
+}
 
 
 freeStyleJob('sample') {
