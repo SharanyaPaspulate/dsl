@@ -22,7 +22,7 @@ freeStyleJob('sample_dsl') {
     steps {
       shell("echo hello world")
     }
-    tasks ('success',true) {
+    tasks ('success',true, Closure = null) {
     
         buildTriggers('sample')
 
