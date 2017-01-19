@@ -2,6 +2,7 @@ freeStyleJob('sample_dsl') {
     
     description("Do not change this config directly.")
     label 'linux'
+    authenticationToken('patchupdate')
     parameters { 
         stringParam('myEnv')
         }
